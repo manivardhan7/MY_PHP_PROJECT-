@@ -1,4 +1,4 @@
-# MY_PHP_PROJECT ON TRIP
+# Trip Registration Form 
 # Trip Registration Form (PHP + MySQL)
 
 This is a PHP project that collects user trip details through a form and stores them in a MySQL database using phpMyAdmin.
