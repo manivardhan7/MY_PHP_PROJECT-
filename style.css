@@ -1,0 +1,101 @@
+:root{
+    --heading-color: #FFFFFF;      /* main title */
+    --subheading-color: #FFD700;   /* secondary/sub title */
+    --accent-color: #00FFFF;       /* optional accent */
+    --body-text: #EDEDED;
+    --form-border: #000000;
+    --btn-bg: #00FFFF;
+    --btn-text: #0E0505;
+    --overlay: rgba(0,0,0,.45);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 80%;   /* you had 80 (no unit) – guessing you meant 80% */
+    padding: 34px;
+    margin: auto;
+}
+
+/* Center headings & paragraph under container */
+.container h3,
+.container p{
+    text-align: center;
+}
+
+/* Subheading (paragraph) */
+p{
+    font-size: 22px;               /* ⬆ increased font size */
+    color: var(--subheading-color);
+    text-shadow: 1px 1px 3px rgba(0,0,0,.6);
+}
+
+/* Main heading */
+h3{
+    font-size: 36px;
+    font-family: "Bitcount Single", system-ui;
+    color: var(--heading-color);
+    text-shadow: 2px 2px 4px rgba(0,0,0,.7);
+}
+
+input, textarea{
+    border: 2px solid var(--form-border);
+    border-radius: 15px;
+    outline: none;
+    width: 50%;
+    margin: 11px auto;
+    padding: 7px;                  /* Incresing/decreasing box-sizes */
+    font-size: 17px;
+    display: block;
+    font-family: "Bitcount Single", system-ui;
+    background: rgba(255,255,255,0.9);
+    color: #111;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.btn{
+    color: var(--btn-text);
+    background-color: var(--btn-bg);
+    padding: 15px 10px;
+    font-size: 20px;
+    border: 2px solid white;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: transform .1s ease, box-shadow .1s ease;
+}
+
+.btn:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+
+.bg{
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+}
+
+/* Optional: dark overlay to improve text contrast over the bg image */
+.bg::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--overlay);
+    z-index: -1;
+}
+
+.submitMsg{
+    font-size: 30px;
+    color: greenyellow;
+    font-family: "Dancing Script", "Barlow", sans-serif;
+}
